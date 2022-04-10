@@ -18,10 +18,10 @@ fi
 # "gdown" is for downloading files from GoogleDrive
 # pip3 install --user gdown > /dev/null
 
-# Create files to "yolov4_crowdhuman/data/raw/"
-# echo "** Creating 'raw' data folder"
-# mkdir -p $(dirname $0)/raw
-# pushd $(dirname $0)/raw > /dev/null
+Create files to "yolov4_crowdhuman/data/raw/"
+echo "** Creating 'raw' data folder"
+mkdir -p $(dirname $0)/raw
+pushd $(dirname $0)/raw > /dev/null
 
 # get_file()
 # {
