@@ -14,9 +14,9 @@ else
   PYTHON=python
 fi
 
-# echo "** Install requirements"
-# "gdown" is for downloading files from GoogleDrive
-# pip3 install --user gdown > /dev/null
+echo "** Install requirements"
+"gdown" is for downloading files from GoogleDrive
+pip3 install --user gdown > /dev/null
 
 Create files to "yolov4_crowdhuman/data/raw/"
 echo "** Creating 'raw' data folder"
