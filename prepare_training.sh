@@ -16,9 +16,9 @@ if [[ ! -f data/${CROWDHUMAN}/train.txt || ! -f data/${CROWDHUMAN}/test.txt ]]; 
   exit 1
 fi
 
-echo "** Install requirements"
-# "gdown" is for downloading files from GoogleDrive
-pip3 install --user gdown > /dev/null
+# echo "** Install requirements"
+# # "gdown" is for downloading files from GoogleDrive
+# pip3 install --user gdown > /dev/null
 
 echo "** Copy files for training"
 ln -sf $(readlink -f data/${CROWDHUMAN}) darknet/data/

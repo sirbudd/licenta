@@ -1,5 +1,4 @@
 #!/bin/bash
-
 set -e
 
 # check argument
@@ -15,13 +14,14 @@ else
   PYTHON=python
 fi
 
-echo "** Install requirements"
+# echo "** Install requirements"
 # "gdown" is for downloading files from GoogleDrive
-pip3 install --user gdown > /dev/null
+# pip3 install --user gdown > /dev/null
 
-# make sure to download dataset files to "yolov4_crowdhuman/data/raw/"
-mkdir -p $(dirname $0)/raw
-pushd $(dirname $0)/raw > /dev/null
+# Create files to "yolov4_crowdhuman/data/raw/"
+# echo "** Creating 'raw' data folder"
+# mkdir -p $(dirname $0)/raw
+# pushd $(dirname $0)/raw > /dev/null
 
 # get_file()
 # {
@@ -45,10 +45,15 @@ pushd $(dirname $0)/raw > /dev/null
 # get_file https://drive.google.com/u/0/uc?id=10WIRwu8ju8GRLuCkZ_vT6hnNxs5ptwoL annotation_val.odgt
 
 # unzip image files (ignore CrowdHuman_test.zip for now)
-echo "** Unzip dataset files"
+echo "** Unzip-ing dataset files"
 for f in CrowdHuman_train01.zip CrowdHuman_train02.zip CrowdHuman_train03.zip CrowdHuman_val.zip ; do
   unzip -n ${f}
 done
+
+x="ls /content/licenta/data/crowdhuman-416x416 | wc -l"
+eval "$x"
+y=$(eval "$x")
+echo "Number of files : $y"
 
 echo "** Create the crowdhuman-$1/ subdirectory"
 rm -rf ../crowdhuman-$1/
@@ -57,7 +62,7 @@ ln Images/*.jpg ../crowdhuman-$1/
 
 # the crowdhuman/ subdirectory now contains all train/val jpg images
 
-echo "** Generate yolo txt files"
+echo "** Generate yolo txt files in crowdhuman subdirectory"
 cd ..
 ${PYTHON} gen_txts.py $1
 
