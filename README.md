@@ -1,4 +1,4 @@
-YOLOv4 CrowdHuman Tutorial
+<!-- YOLOv4 CrowdHuman Tutorial
 ==========================
 
 This is a tutorial demonstrating how to train a YOLOv4 people detector using [Darknet](https://github.com/AlexeyAB/darknet) and the [CrowdHuman dataset](https://www.crowdhuman.org/).
@@ -261,4 +261,4 @@ To deploy the trained "yolov4-crowdhuman-416x416" model onto Jsetson Nano, I'd u
 Contributions
 --------------------------
 
-[@philipp-schmidt](https://github.com/philipp-schmidt): yolov4-tiny models and training charts
+[@philipp-schmidt](https://github.com/philipp-schmidt): yolov4-tiny models and training charts -->
