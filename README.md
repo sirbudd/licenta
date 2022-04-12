@@ -1,5 +1,5 @@
-Licenta
+Licenta<br>
 Sirbu Dragos-Daniel
 
 [Darknet](https://github.com/AlexeyAB/darknet) <br>
-[CrowdHuman dataset](https://www.crowdhuman.org/).
+[CrowdHuman dataset](https://www.crowdhuman.org/)
