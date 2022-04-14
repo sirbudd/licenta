@@ -1,7 +1,7 @@
 [net]
 # Training
-batch=24
-subdivisions=8
+batch=64
+subdivisions=32
 # Testing
 #batch=1
 #subdivisions=1
@@ -15,7 +15,7 @@ saturation = 1.5
 exposure = 1.5
 hue=.1
 
-learning_rate=0.001
+learning_rate=0.00001
 burn_in=1000
 max_batches=4000
 policy=steps
