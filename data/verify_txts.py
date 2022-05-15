@@ -1,9 +1,3 @@
-"""verify_txts.py
-
-For verifying correctness of the generated YOLO txt annotations.
-"""
-
-
 import random
 from pathlib import Path
 from argparse import ArgumentParser
